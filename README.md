@@ -18,6 +18,8 @@
 | --- | --- |
 | `chapter1/` | Chapter 1 실습 |
 | `chapter1/quote-cli/` | 터미널에서 명언을 출력하는 간단한 CLI 도구 |
+| `chapter2/` | Chapter 2 실습 |
+| `chapter2/todo-cli/` | `todo.json`에 저장하는 할 일 관리 CLI 도구 (uv 프로젝트) |
 
 ### Chapter 1: quote-cli
 
@@ -30,6 +32,18 @@
 | `test_quote.py` | pytest 테스트 |
 
 자세한 설치, 실행 방법과 테스트 내용은 [`chapter1/quote-cli/README.md`](chapter1/quote-cli/README.md)를 참고하세요.
+
+### Chapter 2: todo-cli
+
+할 일을 `todo.json`에 저장하는 CLI입니다. `add`, `list`, `start`, `done` 네 가지 명령을 제공하고, 상태(`todo` / `in_progress` / `done`)마다 다른 색으로 표시합니다. `uv`로 관리하며, 목록 조작 로직(`todos.py`)과 CLI 입출력(`cli.py`)을 나누어 로직을 pytest로 테스트합니다.
+
+| 파일 | 설명 |
+| --- | --- |
+| `src/todo_cli/todos.py` | 목록 조작 순수 로직 |
+| `src/todo_cli/cli.py` | 명령 처리, `todo.json` 읽기/쓰기, 색 출력 |
+| `tests/` | pytest 테스트 |
+
+자세한 설치, 실행 방법은 [`chapter2/todo-cli/README.md`](chapter2/todo-cli/README.md)를 참고하세요.
 
 ## 참고
 
